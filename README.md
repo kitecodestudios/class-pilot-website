@@ -4,7 +4,7 @@ Public FAQ + privacy policy for App Store / Play listing URLs.
 
 Live (after Cloudflare Pages deploy): `https://class-pilot.pages.dev/`  
 Privacy: `https://class-pilot.pages.dev/privacy.html`  
-(`/privacy` redirects to `/privacy.html`.)
+(Cloudflare serves `privacy.html` at `/privacy`. Do not add a `_redirects` rule for it, or the two URLs loop.)
 
 App source: [kitecodestudios/class-pilot](https://github.com/kitecodestudios/class-pilot)
 
