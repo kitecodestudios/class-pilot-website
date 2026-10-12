@@ -72,22 +72,9 @@ a:hover {
 .brand-mark {
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 0.65rem;
-  background:
-    linear-gradient(135deg, var(--cyan), var(--indigo) 55%, #8e44ff);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 8px 24px rgba(42, 84, 255, 0.35);
-  position: relative;
-}
-
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  top: 0.35rem;
-  right: 0.35rem;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: var(--gold);
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .nav {
