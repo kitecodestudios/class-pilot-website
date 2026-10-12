@@ -31,8 +31,20 @@ Open http://localhost:8080
 
 Optional later: **Custom domains** → `classpilot.app`.
 
+## Keep this site aligned with the app
+
+This repo does not update when the app repo changes. After a product or policy change in ClassPilot, update the matching page here, then deploy Cloudflare Pages. The live site at `class-pilot.pages.dev` stays on the last deploy until then.
+
+| App change | Update here |
+| --- | --- |
+| `assets/privacy/privacy_policy.md` | `privacy.html` (same facts, HTML) |
+| Pricing, free tier, Family trial, offer codes, support email | `index.html` FAQ and feature list |
+| Pause, breaks, fees, reminders, or other parent-facing behavior | `index.html` FAQ and Features |
+| New store screenshots worth showing | `images/` and the How it looks gallery |
+
+Store listing paste-text stays in the app at `docs/STORE_LISTING.md`. This site is the public FAQ and privacy URL.
+
 ## Edit checklist
 
 - [ ] Replace App Store / Google Play `href="#download"` with real store URLs in `index.html`
-- [ ] Keep `privacy.html` in sync with the app’s `assets/privacy/privacy_policy.md` when that policy changes
 - [ ] Optional custom domain + HTTPS

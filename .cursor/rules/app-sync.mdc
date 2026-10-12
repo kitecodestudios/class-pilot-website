@@ -1,0 +1,15 @@
+---
+description: This site mirrors the ClassPilot app; check the app repo before editing copy
+alwaysApply: true
+---
+
+# Mirror the ClassPilot app
+
+This site is the public FAQ and privacy page for the app at `/Users/siva/z_Personal/Class-Pilot`. Its facts come from the app.
+
+- `privacy.html` matches `Class-Pilot/assets/privacy/privacy_policy.md`. Change both together.
+- FAQ and Features match current app behavior, pricing (`lib/core/config/app_config.dart`, paywall), and `docs/STORE_LISTING.md`.
+- Gallery images come from `Class-Pilot/screenshots/raw/`, resized with `sips -Z 520`.
+- If the site and app disagree, the app code is the source of truth. Fix the site, or tell the user the app needs the change.
+- Use affirmative wording. Support email is `classpilot@kitecodestudios.com`.
+- Do not commit, push, or deploy unless asked. The live site updates only after a Cloudflare Pages deploy.

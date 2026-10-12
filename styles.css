@@ -55,26 +55,40 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1.25rem 0 0.5rem;
+  gap: 1rem 1.25rem;
+  flex-wrap: wrap;
+  padding: 1.35rem 0 0.35rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  color: var(--text);
+  gap: 0.8rem;
+  color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+}
+
+.brand:hover {
+  color: #fff;
 }
 
 .brand-mark {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   flex-shrink: 0;
+  border-radius: 0.85rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.16),
+    0 10px 28px rgba(42, 84, 255, 0.42);
+}
+
+.brand-name {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 .nav {
@@ -185,6 +199,48 @@ a:hover {
 .features span {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.looks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.looks figure {
+  margin: 0;
+}
+
+.looks img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.looks figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .looks {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 68%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.35rem;
+  }
+
+  .looks figure {
+    scroll-snap-align: start;
+  }
 }
 
 .faq details {
